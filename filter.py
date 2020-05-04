@@ -3,10 +3,10 @@ def file_get_contents(filename):
         return f.read()
 
 
-list_user = file_get_contents("list.txt").splitlines()
+list_user = file_get_contents("list_member.txt").splitlines()
 
 
-real_names = file_get_contents("real.txt").splitlines()
+real_names = file_get_contents("whitelist.txt").splitlines()
 cnt = 0
 for x in list_user:
     res = [ele for ele in real_names if(ele in x.lower())]
